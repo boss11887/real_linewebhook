@@ -4,11 +4,13 @@ import { Request, Response } from "express";
 import * as db from "./query";
 
 const app = express();
-const PORT = 3000;
+const BACKEND_PORT = 3000;
 
 app.use(bodyParser.json());
 
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(BACKEND_PORT, () =>
+  console.log(`🚀 Server running on port ${BACKEND_PORT}`)
+);
 
 app.post("/hook", (req: Request, res: Response) => {
   // All message events
