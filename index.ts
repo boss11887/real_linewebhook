@@ -10,6 +10,10 @@ app.use(bodyParser.json());
 
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 
+process.on("uncaughtException", function (err) {
+  console.log(err);
+});
+
 app.post("/hook", (req: Request, res: Response) => {
   // All message events
   const events = req.body.events;
