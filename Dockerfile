@@ -25,8 +25,9 @@ ARG PORT
 ARG DATABASE
 ARG USERNAME
 ARG PASSWORD
+ENV NODE_ENV production
 
 # run the app
 USER bun
 EXPOSE 3000/tcp
-ENTRYPOINT [ "bun", "run", "index.ts" ]
+CMD [ "bun", "start" ]
