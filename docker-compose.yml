@@ -7,4 +7,8 @@ services:
       - "3000:3000"
     env_file:
       - .env
+    volumes:
+      - ./index.ts:/usr/src/app/index.ts
+      - ./query.ts:/usr/src/app/query.ts
+    command: ["dev"]
 

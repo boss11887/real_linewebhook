@@ -31,4 +31,5 @@ ENV NODE_ENV production
 # run the app
 USER bun
 EXPOSE 3000/tcp
-CMD [ "bun", "start" ]
+CMD ["start"]
+ENTRYPOINT ["bun"]
